@@ -19,7 +19,12 @@ jobs:
 
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
-
+        
+      - name: Set up Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+          
       - name: Save artifact
         uses: actions/upload-artifact@v2
         with:
